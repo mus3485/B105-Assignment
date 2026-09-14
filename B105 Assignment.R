@@ -72,10 +72,8 @@ ggplot(ship_mode_sales, aes(x = reorder(Ship.Mode, Total_Sales), y = Total_Sales
 
 anova_model <- aov(Sales ~ Ship.Mode, data = train_clean)
 
-# View the ANOVA summary table (p-values, F-statistics)
 summary(anova_model)
 
-# Check model assumptions (Normality of residuals / diagnostics)
 par(mfrow = c(2, 2))
 plot(anova_model)
 par(mfrow = c(1, 1))
